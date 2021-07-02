@@ -15,8 +15,9 @@ export default function App() {
   return (
     <View style={styles.container}>
       <WebView
-        source={{ uri: 'http://localhost:3000' }}
-        style={{ width: "100%" }}
+        source={{ uri: 'http://localhost:3000/groups' }}
+        sharedCookiesEnabled={true}
+        style={{ backgroundColor: "white", width: "100%" }}
         injectedJavaScriptBeforeContentLoaded={INJECTED_JAVASCRIPT}
         onMessage={(event) => {
           event.nativeEvent.data
